@@ -14,13 +14,13 @@ import (
 // It creates an index.html file with
 // content filled in based on the arguments given
 func main() {
-	fname := os.Args[1]
-	lname := os.Args[2]
-
-	if fname == "" || lname == "" {
+	if len(os.Args) != 3 {
 		log.Fatal(`Error: You haven't provided enough arguments. 
 			This program expects 2 command line arguments: first name and last name.`)
 	}
+
+	fname := os.Args[1]
+	lname := os.Args[2]
 
 	template := fmt.Sprint(`<!DOCTYPE html>
 	<html>
