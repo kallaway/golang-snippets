@@ -5,7 +5,8 @@
         <title></title>
     </head>
     <body>
+        {{ $values := . }}
         <h1>What are the values passed in?</h1>
-        <h2>{{.}}</h2>
+        <h2>{{$values}}</h2>
     </body>
 </html>
