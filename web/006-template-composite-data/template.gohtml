@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>What do we need to do today?</h1>
+        <ul>
+            {{range .Td}}
+                <li>{{.}}</li>
+            {{end}}
+        </ul>
+
+        <h2>Can you make a numbered list of that?</h2>
+        <ul>
+            {{range $i, $todo := .Td}}
+                <li>{{$i}} - {{$todo}}</li>
+            {{end}}
+        </ul>
+
+        <h2>Tell me about countries and their languages</h2>
+        <ul>
+            {{range $country, $language := .Lang}}
+                <li>In {{$country}}, people speak {{$language}}</li>
+            {{end}}
+        </ul>
+
+        <h2>Tell me about your pet!</h2>
+        <p>I have a {{.Animal.Kind}} named {{.Animal.Name}}, {{.Animal.Age}} years old.</p>
+    </body>
+</html>
