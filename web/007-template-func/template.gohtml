@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Go Template</title>
+    </head>
+    <body>
+        <h1>Some facts about College</h1>
+
+        <p>College Name: {{ uc .Name }}</p>
+
+        <h2>What were the subjects taught there? Tell me the first three that come to mind.</h2>
+
+        <p>Let me think... The subjects were: {{ limit3 .Subjects }}</p>
+
+        
+    </body>
+</html>
